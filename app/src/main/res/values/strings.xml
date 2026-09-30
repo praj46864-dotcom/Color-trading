@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Screen Agent</string>
+    <string name="service_desc">Sirf aapke Start session dabane par screen dekhta hai aur allowed actions (tap, scroll, back) karta hai. Isse OFF karte hi band ho jaata hai.</string>
+</resources>
