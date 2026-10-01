@@ -30,7 +30,7 @@ class MainActivity : Activity() {
             setPadding(32, 64, 32, 32)
         }
         key = EditText(this).apply {
-            hint = "Anthropic API key"
+            hint = "API keys (comma se alag: sk-ant-..., sk-..., AIza...)"
             inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             setText(prefs.getString("key", ""))
         }
