@@ -55,6 +55,11 @@ class MainActivity : Activity() {
             prefs.edit().putString("key", key.text.toString().trim())
                 .putString("q", question.text.toString().trim())
                 .putString("secs", secs.text.toString().trim()).apply()
+            if (!Guard.hasUsageAccess(this)) {
+                log.append("Usage access me Screen Agent ON karo, phir wapas aakar Share & Analyze dabao.\n")
+                startActivity(Intent(android.provider.Settings.ACTION_USAGE_ACCESS_SETTINGS))
+                return@setOnClickListener
+            }
             val mpm = getSystemService(MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
             startActivityForResult(mpm.createScreenCaptureIntent(), 1)
         }
